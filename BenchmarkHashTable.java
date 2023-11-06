@@ -22,10 +22,10 @@ public class BenchmarkHashTable {
         medidor.pararMedicao();
         double tempoSeg = medidor.obterTempoSegundos();
 
-       // medidor.iniciarMedicao();
-       // hash_tabela.BuscaPosicao(HashTable::FoldingHashing, conjunto);
-       // medidor.pararMedicao();
-       // double buscaSeg = medidor.obterTempoSegundos();
+        medidor.iniciarMedicao();
+        hash_tabela.BuscaPosicao(HashTable::FoldingHashing, conjunto);
+        medidor.pararMedicao();
+         double buscaSeg = medidor.obterTempoSegundos();
 
         //int tam = hash_tabela.getTamanhoTabela();
         int colisoes = hash_tabela.getColisoes();
@@ -33,11 +33,11 @@ public class BenchmarkHashTable {
         System.out.println("========================");
         System.out.println("Tempo de execução de Insercao: " + tempoSeg + " segundos");
         System.out.println("========================");
-       // System.out.println("Tempo de execução de Busca: " + buscaSeg + " segundos");
+        System.out.println("Tempo de execução de Busca: " + buscaSeg + " segundos");
         System.out.println("------------------------");
-       // System.out.println("Tamanho tabela: " + tam);
+        System.out.println("Tamanho tabela: " + tam);
         System.out.println("Total colisao: " + colisoes);
-      //  System.out.println("LoadFactor: " + loadFactor);
+        //System.out.println("LoadFactor: " + loadFactor);
         
         //hash_tabela.getChavesColisao();
 
